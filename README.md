@@ -12,6 +12,16 @@ ChitChat is a small desktop chat application built with Python, CustomTkinter, a
 - Server commands for monitoring and moderation
 - Local-network and internet server launchers
 
+## Gallery
+
+<p align="center">
+  Server <br />
+  <img width="563" height="538" alt="chitchat-server" src="https://github.com/user-attachments/assets/a495de7e-9d0e-43ca-8008-99344eaff5cc" /><br /><br />
+  Client <br />
+  <img width="377" height="601" alt="chitchat-client-connection" src="https://github.com/user-attachments/assets/4f343c0f-d1b9-4a73-9d1e-2e641af7e689" /><br /><br />
+  <img width="377" height="601" alt="chitchat-client-chatroom" src="https://github.com/user-attachments/assets/a0e0595b-19b7-43ab-906b-05ef502db0ae" /><br /><br />
+</p>
+
 ## Requirements
 
 - Windows, macOS, or Linux with Python 3
