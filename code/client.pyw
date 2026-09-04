@@ -4,7 +4,7 @@ Version : 1.0.2
 '''
 
 # built-in modules
-import socket, threading, os, random, subprocess
+import socket, threading, os, random, subprocess, shutil
 
 # pip installed modules
 import customtkinter as ctk
@@ -222,6 +222,7 @@ class Client(ctk.CTk):
             self.client.send(f'!joinfail {joinfail_reason}'.encode())
         self.client.close()         # closes connection.
         self.login_page.lift()      # switches to login page.
+        shutil.rmtree('../files')
 
     def listen(self):
         '''
