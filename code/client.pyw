@@ -4,7 +4,7 @@ Version : 1.0.2
 '''
 
 # built-in modules
-import socket, threading, os, random
+import socket, threading, os, random, subprocess
 
 # pip installed modules
 import customtkinter as ctk
@@ -381,6 +381,7 @@ class Client(ctk.CTk):
         Stores file and display prompt to view file.
         '''
 
+        if not os.path.exists("../files"): os.mkdir("../files")
         with open(f'../files/{file_name}', 'w') as f:
             f.write(content)
         
@@ -398,7 +399,7 @@ class Client(ctk.CTk):
         View stored file.
         '''
 
-        file_thread = threading.Thread(target = os.system, args = (f'""../files/{file_name}""',))
+        file_thread = threading.Thread(target = subprocess.run, args = (f'notepad "../files/{file_name}"',), kwargs = {"creationflags": subprocess.CREATE_NO_WINDOW})
         file_thread.daemon = True
         file_thread.start()
 
